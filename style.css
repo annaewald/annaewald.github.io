@@ -1,0 +1,236 @@
+:root {
+  --accent: #2a9d8f; 
+  --text: #222;
+  --bg: #fafafa;
+}
+
+/* GENERAL */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; 
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1rem; 
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.name-title {
+  margin: 0;
+  font-size: 2.4rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  font-weight: 300;
+}
+
+.accent-line {
+  height: 4px;
+  background: var(--accent);
+  margin: 1.2rem auto 0;
+  width: 80%; 
+  border-radius: 2px;
+}
+
+/* NAVIGATION */
+.nav-tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 0;
+  margin: 1.6rem 0 0;
+  border-bottom: 2px solid #ddd;
+  overflow-x: hidden; 
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tabs .tab {
+  cursor: pointer;
+  padding: 0.6rem 0;
+  flex: 0 0 auto;
+  transition: color 0.2s;
+}
+
+.nav-tabs .tab:hover,
+.nav-tabs .tab.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* TAB CONTENT */
+.tab-content {
+  display: none;
+  margin-top: 2rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* HOME */
+.home-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 2rem; 
+  align-items: flex-start;
+  max-width: 100%; 
+}
+
+.home-text {
+  flex: 1 1 60%;
+  text-align: left;
+  min-width: 280px; 
+}
+
+.home-side {
+  flex: 1 1 35%;
+  text-align: center;
+  min-width: 200px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 11px;
+  margin-bottom: 1.2rem;
+}
+
+/* CONTACT */
+.contact-section h4 {
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+.email a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.email a:hover {
+  color: var(--accent);
+}
+
+.mail-icon {
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
+
+/* PROJECTS */
+.project-card {
+  margin-bottom: 1.6rem;
+}
+
+/* PROJECT BUTTONS */
+.project-card .btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.project-card .btn:hover {
+  background-color: #238a7b; 
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background: #f0f3f2;
+  padding: 1.4rem 1rem;
+  width: 100%; 
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-icons a {
+  margin: 0 0.6rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-text {
+    margin-bottom: 1.5rem; 
+    text-align: center;
+    min-width: auto;
+  }
+
+  .home-side {
+    flex: none;
+    width: 80%;
+    min-width: auto;
+  }
+
+  .profile-img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-tabs {
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0 1.2rem;
+    overflow-x: auto; 
+  }
+
+  .footer-icons a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+}
